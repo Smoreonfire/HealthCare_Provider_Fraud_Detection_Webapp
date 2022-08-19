@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <body>
+  
+  <h2> Predict the Probability of a HealthCare Provider being Fraudulent</h2>
+  
+  <form method="POST" action="/">
+    TotalTeDiagCode:<br>
+    <input type="number" name="TotalTeDiagCode" value=1.1>
+    <br><br>
+    TotalTeProCode:<br>
+    <input type="number" name="TotalTeProcCode" value=1.2>
+    <br><br>
+    MaximiumLengthofHosptializedStays:<br>
+    <input type="number" name="MaxHospitalDays" value=15>
+    <br><br>
+    Maximium_number_of_Diagnosis_Codes_per_Claim:<br>
+    <input type="number" name="MaxDiagCodeNumPerClaim" value = 9>
+    <br><br>
+    Median_length_of_HospitalizedStays:<br>
+    <input type="number" name="MedianHospitalDays" value = 0>
+    <br><br>
+    Number_of_Claims_submitted_for_each_beneficiary:<br>
+    <input type="number" name="ClmsperBene" value = 2>
+    <br><br>
+    Number_of_Beneficiaries_filed_for_in_one_year:<br>
+    <input type="number" name="uniqBeneCount" value = 24>
+    <br><br>
+    Major_Race:<br>
+    <input type="number" name="MajorRace" value = 1>
+    <br><br>
+    Mean_of_Low_Frequency_Diagnosis_Code_Number_per_Claims:<br>
+    <input type="number" name="MeanLowFreqDiagCodeNumPerClaim" value = 0.2>
+    <br><br>
+    Percentage_of_inpatient_Claims:<br>
+    <input type="number" name="InClmsPct" value = 0.2>
+    <br><br>
+    Total_inpatient_service_claim_amount_reimbursed_in_a_year:<br>
+    <input type="number" name="TotalInscClaimAmtReimbursed" value = 100000>
+
+    <br><br>
+    <input type="submit" value="Submit">
+  </form>
+
+  {% if pred %}
+  <p>The probability of a healthcare provider being fraudulent is {{ pred }}</p>
+  {% endif %}
+
+  </body>
+</html>
